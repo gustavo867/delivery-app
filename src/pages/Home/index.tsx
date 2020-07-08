@@ -8,7 +8,7 @@ export default function Home() {
   const navigation = useNavigation();
 
   function handleNavigateCategories() {
-    navigation.navigate('Categories')
+    navigation.navigate('App')
   }
 
   return (

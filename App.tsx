@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/pages/Home';
 import Categories from './src/pages/Categories';
 import Profile from './src/pages/Profile';
+import Cart from './src/pages/Cart';
 import Vegetables from './src/pages/Vegetables';
 
 const AppStack = createStackNavigator();
@@ -34,11 +35,11 @@ const TabNavScreen = () => {
         let iconName;
 
         switch (route.name) {
-          case "Home":
+          case "Categories":
             iconName = 'grid';
             break;
 
-          case "Categories":
+          case "Cart":
             iconName = 'shopping-cart';
             break;
 
@@ -58,8 +59,8 @@ const TabNavScreen = () => {
         )
       },
     })}>
-      <TabNav.Screen name="Home" component={Home}/>
       <TabNav.Screen name="Categories" component={Categories}/>
+      <TabNav.Screen name="Cart" component={Cart}/>
       <TabNav.Screen name="Profile" component={Profile}/>
       </TabNav.Navigator>
   )
@@ -69,6 +70,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <AppStack.Navigator mode="modal" headerMode="none">
+        <AppStack.Screen name="Home" component={Home}/>
         <AppStack.Screen name="App" component={TabNavScreen}/>
         <AppStack.Screen name="Vegetables" component={Vegetables}/>
       </AppStack.Navigator>
