@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native'
 import { Entypo } from '@expo/vector-icons';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Home() {
+  const navigation = useNavigation();
+
+  function handleNavigateCategories() {
+    navigation.navigate('Categories')
+  }
+
   return (
     <>
     <View style={styles.container}>
@@ -20,7 +27,7 @@ export default function Home() {
       <Text style={styles.Text}>Non-Contact</Text>
       <Text style={styles.Text}>Deliveries</Text>
       <Text style={styles.text}>When placing and order, select the option "Contactless delivery" and the courier will leave your order at the door.</Text>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity onPress={handleNavigateCategories} style={styles.button}>
         <Text style={{ color: '#FFFF', fontWeight: '600', fontSize: 16, textTransform: 'uppercase', letterSpacing: -0.01, }}>Order Now</Text>
       </TouchableOpacity>
       <Text style={{ marginTop: 20, color: '#9586A8', fontWeight: '600', fontSize: 16, textTransform: 'uppercase', letterSpacing: -0.01, }}>Dismiss</Text>
