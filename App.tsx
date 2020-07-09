@@ -54,7 +54,7 @@ const TabNavScreen = () => {
 
         return (
           <View style={styles.container}>
-            <Entypo name={iconName} size={24} color="rgba(114, 3, 255, 0.5)"/>
+            <Entypo name={iconName} size={24} color={focused ? 'rgba(114, 3, 255, 0.5)' : 'rgba(114, 3, 255, 0.1)'}/>
           </View>
         )
       },

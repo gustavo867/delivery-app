@@ -1,12 +1,16 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, TextInput } from 'react-native';
 
 const Categories = () => {
  
   const navigation = useNavigation();
+
+  function handleNavigateVegetables() {
+    navigation.navigate('Vegetables')
+  }
 
   function handleNavigateHome() {
     navigation.navigate('Home')
@@ -26,56 +30,56 @@ const Categories = () => {
 
         <TouchableOpacity style={{ marginTop: 27, alignItems: 'center', flexDirection: 'row', width: '90%', backgroundColor: '#FFFFFF', borderRadius: 27, borderColor: '1 solid #D9D0E3' ,height: 47, }}>
           <Ionicons style={{ marginLeft: 25, }} name="ios-search" size={28} color="#2D0C57" />
-          <Text style={{ marginLeft: 21, fontSize: 17, color: '#2D0C57', }}>Search</Text>
+          <TextInput placeholder="Search" style={{ marginLeft: 21, fontSize: 17, color: '#2D0C57', }}/>
         </TouchableOpacity>
       </View>  
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
 
         <View style={{ flexDirection: 'row', }}>
-          <View style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 42, backgroundColor: '#FFFF', }}>
+          <TouchableOpacity onPress={handleNavigateVegetables} style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 42, backgroundColor: '#FFFF', }}>
             <Image source={require('../../images/vegetables.jpg')} style={{ height: 140, width: 160, borderTopRightRadius: 8, borderTopLeftRadius: 8,}}/>
             <Text style={styles.nameText}>Vegetables</Text>
             <Text style={{ marginLeft: 16, fontSize: 12, color: '#9586A8', marginBottom: 16, }}>(43)</Text>
-          </View> 
+          </TouchableOpacity> 
 
-          <View style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 42, backgroundColor: '#FFFF', }}>
+          <TouchableOpacity onPress={handleNavigateVegetables} style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 42, backgroundColor: '#FFFF', }}>
             <Image source={require('../../images/orange.jpg')} style={{ height: 140, width: 160, borderTopRightRadius: 8, borderTopLeftRadius: 8,}}/>
             <Text style={styles.nameText}>Fruits</Text>
             <Text style={{ marginLeft: 16, fontSize: 12, color: '#9586A8', marginBottom: 16, }}>(32)</Text>
-          </View> 
+          </TouchableOpacity> 
 
         </View>
 
         <View style={{ flexDirection: 'row', }}>
 
-            <View style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
+            <TouchableOpacity onPress={handleNavigateVegetables} style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
               <Image source={require('../../images/bread.jpg')} style={{ height: 140, width: 160, borderTopRightRadius: 8, borderTopLeftRadius: 8,}}/>
               <Text style={styles.nameText}>Bread</Text>
               <Text style={{ marginLeft: 16, fontSize: 12, color: '#9586A8', marginBottom: 16, }}>(22)</Text>
-            </View> 
+            </TouchableOpacity> 
 
-            <View style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
+            <TouchableOpacity onPress={handleNavigateVegetables} style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
               <Image source={require('../../images/sweets.jpg')} style={{ height: 140, width: 160, borderTopRightRadius: 8, borderTopLeftRadius: 8,}}/>
               <Text style={styles.nameText}>Sweets</Text>
               <Text style={{ marginLeft: 16, fontSize: 12, color: '#9586A8', marginBottom: 16, }}>(56)</Text>
-            </View> 
+            </TouchableOpacity> 
 
         </View>
 
         <View style={{ flexDirection: 'row', }}>
 
-            <View style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
+            <TouchableOpacity  onPress={handleNavigateVegetables} style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
               <Image source={require('../../images/pizza.jpg')} style={{ height: 140, width: 160, borderTopRightRadius: 8, borderTopLeftRadius: 8,}}/>
               <Text style={styles.nameText}>Pizza</Text>
               <Text style={{ marginLeft: 16, fontSize: 12, color: '#9586A8', marginBottom: 16, }}>(30)</Text>
-            </View> 
+            </TouchableOpacity> 
 
-            <View style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
+            <TouchableOpacity onPress={handleNavigateVegetables} style={{ borderRadius: 8, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', marginLeft: 20, marginTop: 20, backgroundColor: '#FFFF', }}>
               <Image source={require('../../images/coffe.jpg')} style={{ height: 140, width: 160, borderTopRightRadius: 8, borderTopLeftRadius: 8,}}/>
               <Text style={styles.nameText}>Coffe</Text>
               <Text style={{ marginLeft: 16, fontSize: 12, color: '#9586A8', marginBottom: 16, }}>(20)</Text>
-            </View> 
+            </TouchableOpacity> 
 
         </View>
       </ScrollView>
