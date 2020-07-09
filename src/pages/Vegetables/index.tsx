@@ -7,14 +7,28 @@ import { View, Text, Touchable, Image, StyleSheet, TouchableOpacity, TextInput, 
 
 const Vegetables = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isHeart, setIsHeart] = useState(true);
+  const [isHeartTrue, setIsHeartTrue] = useState(true);
   const navigation = useNavigation();
 
   function handleToggleVisibility() {
     setIsVisible((prevState) => !prevState);
   }
 
+  function handleToggleHeart() {
+    setIsHeart((prevState) => !prevState);
+  }
+
+  function handleToggleHeartTrue() {
+    setIsHeartTrue((prevState) => !prevState);
+  }
+
   function handleNavigateBack() {
     navigation.goBack()
+  }
+
+  function handleNavigateVegetableCart() {
+    navigation.navigate('VegetableCart')
   }
 
   return (
@@ -32,7 +46,7 @@ const Vegetables = () => {
         <TextInput placeholder="Search" style={{ marginLeft: 21, fontSize: 17, color: '#2D0C57', }}/>
       </TouchableOpacity>
 
-        <View style={{ height: 200 }}>
+        <View style={{ height: 195, }}>
           <View style={{ flexDirection: 'row', }}>
             <TouchableOpacity style={{ marginTop: 46, marginLeft: 20, justifyContent: 'center', alignItems: 'center', flexDirection: 'row', backgroundColor: '#E2CBFF', width: 225, height: 34, borderRadius: 24,}}>
               <AntDesign name="check" size={24} color="#6C0EE4" />
@@ -59,24 +73,62 @@ const Vegetables = () => {
           </View>
         </View>   
         
-        <View style={{ justifyContent: 'flex-start', }}>
-          <View style={{ flexDirection: 'row', marginLeft: 10, }}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={{ flexDirection: 'row', marginLeft: 20, }}>
             <Image style={styles.image} source={require('../../images/lettuce.jpg')}/>
             <View>
               <Text style={{ marginLeft: 20, fontWeight: '600', lineHeight: 22, letterSpacing: -0.41, fontSize: 18, color: '#2D0C57' }}>Boston Lettuce</Text>
               <Text style={{ marginTop: 12, marginLeft: 20, fontWeight: '700', lineHeight: 22, letterSpacing: -0.41, fontSize: 22, color: '#2D0C57' }}>1.10 <Text style={{ fontSize: 16, color: '#9586A8', fontWeight: '500' }}>€ / piece</Text></Text>
 
               <View style={{ flexDirection: 'row' }}>
-                <TouchableOpacity onPress={handleToggleVisibility} style={styles.heartButton}>
-                  <Ionicons name={isVisible ? 'md-heart-empty' : 'md-heart'} size={20} color={isVisible ? 'black' : '#890620'} />
+                <TouchableOpacity onPress={handleToggleHeart} style={styles.heartButton}>
+                  <Ionicons name={isHeart ? 'md-heart-empty' : 'md-heart'} size={20} color={isHeart ? 'black' : '#890620'} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.shopButton}>
+                <TouchableOpacity onPress={handleNavigateVegetableCart} style={styles.shopButton}>
                   <Feather name="shopping-cart" size={20} color="#fff" />
                 </TouchableOpacity>
               </View>
+     
             </View>        
           </View>
-        </View>
+
+          <View style={{ flexDirection: 'row', marginLeft: 20, marginTop: 40, }}>
+            <Image style={styles.image} source={require('../../images/cauliflower.jpg')}/>
+            <View>
+              <Text style={{ marginLeft: 20, fontWeight: '600', lineHeight: 22, letterSpacing: -0.41, fontSize: 18, color: '#2D0C57' }}>Purple Cauliflower</Text>
+              <Text style={{ marginTop: 12, marginLeft: 20, fontWeight: '700', lineHeight: 22, letterSpacing: -0.41, fontSize: 22, color: '#2D0C57' }}>1.85 <Text style={{ fontSize: 16, color: '#9586A8', fontWeight: '500' }}>€ / kg</Text></Text>
+
+              <View style={{ flexDirection: 'row' }}>
+                <TouchableOpacity onPress={handleToggleVisibility} style={styles.heartButton}>
+                  <Ionicons name={isVisible ? 'md-heart-empty' : 'md-heart'} size={20} color={isVisible ? 'black' : '#890620'} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleNavigateVegetableCart} style={styles.shopButton}>
+                  <Feather name="shopping-cart" size={20} color="#fff" />
+                </TouchableOpacity>
+              </View>
+     
+            </View>        
+          </View>
+
+          <View style={{ flexDirection: 'row', marginLeft: 20, marginTop: 40, marginBottom: 10,}}>
+            <Image style={styles.image} source={require('../../images/cabbage.jpg')}/>
+            <View>
+              <Text style={{ marginLeft: 20, fontWeight: '600', lineHeight: 22, letterSpacing: -0.41, fontSize: 18, color: '#2D0C57' }}>Savoy Cabbage</Text>
+              <Text style={{ marginTop: 12, marginLeft: 20, fontWeight: '700', lineHeight: 22, letterSpacing: -0.41, fontSize: 22, color: '#2D0C57' }}>1.45 <Text style={{ fontSize: 16, color: '#9586A8', fontWeight: '500' }}>€ / kg</Text></Text>
+
+              <View style={{ flexDirection: 'row' }}>
+                <TouchableOpacity onPress={handleToggleHeartTrue} style={styles.heartButton}>
+                  <Ionicons name={isHeartTrue ? 'md-heart-empty' : 'md-heart'} size={20} color={isHeartTrue ? 'black' : '#890620'} />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleNavigateVegetableCart} style={styles.shopButton}>
+                  <Feather name="shopping-cart" size={20} color="#fff" />
+                </TouchableOpacity>
+              </View>
+     
+            </View>        
+          </View>
+
+        </ScrollView>
         
         
     </View>

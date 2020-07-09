@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Entypo, AntDesign } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import styled from 'styled-components';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,6 +12,7 @@ import Categories from './src/pages/Categories';
 import Profile from './src/pages/Profile';
 import Cart from './src/pages/Cart';
 import Vegetables from './src/pages/Vegetables';
+import VegetableCart from './src/pages/VegetableCart';
 
 const AppStack = createStackNavigator();
 const TabNav = createBottomTabNavigator();
@@ -54,7 +55,7 @@ const TabNavScreen = () => {
 
         return (
           <View style={styles.container}>
-            <Entypo name={iconName} size={24} color={focused ? 'rgba(114, 3, 255, 0.5)' : 'rgba(114, 3, 255, 0.1)'}/>
+            <Feather name={iconName} size={24} color={focused ? 'rgba(114, 3, 255, 0.5)' : 'rgba(0, 0, 0, 0.3)'}/>
           </View>
         )
       },
@@ -73,6 +74,7 @@ export default function App() {
         <AppStack.Screen name="Home" component={Home}/>
         <AppStack.Screen name="App" component={TabNavScreen}/>
         <AppStack.Screen name="Vegetables" component={Vegetables}/>
+        <AppStack.Screen name="VegetableCart" component={VegetableCart}/>
       </AppStack.Navigator>
     </NavigationContainer>
   );

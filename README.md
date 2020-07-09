@@ -33,9 +33,11 @@ $ yarn ios
 # If you are going to use smartphone 
 $ yarn start or expo start
 ```
-## Categories 
+
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/63013756/86977730-adc47080-c153-11ea-8802-dde121b320ed.png" height="800"></img>
+<h2>Categories  and Vegetables</h2>
+  <img src="https://user-images.githubusercontent.com/63013756/87097933-a0bf8400-c21c-11ea-947e-cdfb8bca5007.png" height="800"></img>
+  <img src="https://user-images.githubusercontent.com/63013756/87096673-b97a6a80-c219-11ea-9458-546e57118ceb.png" height="800"></img>
 </div>
 
 ## 🤔 How to contribute
