@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from "expo-status-bar";
 import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -18,6 +19,7 @@ const Categories = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="dark" />
       <LinearGradient
           colors={['#F6F5F5' , 'rgba(255, 255, 255, 0.2)']}
           style={{ position: 'absolute', height: '100%' , left: 0, right: 0, top: 0,}}

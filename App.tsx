@@ -1,7 +1,7 @@
 import React from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import styled from 'styled-components';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

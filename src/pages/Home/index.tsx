@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from "expo-status-bar";
 import { useNavigation } from '@react-navigation/native'
 import { Entypo } from '@expo/vector-icons';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
     <View style={styles.container}>
+      <StatusBar style="light"/>
       <LinearGradient
           colors={['rgba(111, 18, 231, 0.4)', 'rgba(111, 18, 231, 0.7);']}
           style={{ position: 'absolute', height: 450 , left: 0, right: 0, top: 0,}}
