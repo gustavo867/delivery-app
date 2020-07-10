@@ -40,6 +40,12 @@ $ yarn start or expo start
   <img src="https://user-images.githubusercontent.com/63013756/87096673-b97a6a80-c219-11ea-9458-546e57118ceb.png" height="800"></img>
 </div>
 
+<div align="center">
+<h2>Vegetagle Especification and Cart</h2>
+  <img src="https://user-images.githubusercontent.com/63013756/87120453-d2554100-c256-11ea-8fd2-2413c39e7822.png" height="800"></img>
+  <img src="https://user-images.githubusercontent.com/63013756/87120499-eef17900-c256-11ea-9fce-79931cd46668.png" height="800"></img>
+</div>
+
 ## 🤔 How to contribute
 
 **Make a fork of this repository**
