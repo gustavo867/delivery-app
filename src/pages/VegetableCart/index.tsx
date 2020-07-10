@@ -130,4 +130,5 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: '#FFFFFF'
   },
+  
 })

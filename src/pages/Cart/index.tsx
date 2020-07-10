@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { CheckoutContainer } from './styles';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
@@ -13,6 +13,10 @@ const Cart = () => {
 
   function handleNavigateBack() {
     navigation.goBack()
+  }
+
+  function handleNavigateToPayment() {
+   navigation.navigate('Payment')
   }
 
   return (
@@ -82,15 +86,18 @@ const Cart = () => {
           <TouchableOpacity style={{ flexDirection: 'row', backgroundColor: '#E2CBFF', width: 74, borderRadius: 36, alignItems: 'center', }}>
             <Text style={{ marginLeft: 14, color: '#6C0EE4', fontWeight: '600', fontSize: 14,}}>Yes</Text>
             <View style={{ backgroundColor: '#FFFFFF', borderRadius: 13, width: 26, height: 26, marginLeft: 8, }}>
-              
             </View>
-          </TouchableOpacity>
-         
+          </TouchableOpacity>      
         </View>
       </View>
-
+         <View style={{ flexDirection: 'row', }}>
+            <TouchableOpacity onPress={handleNavigateToPayment} style={styles.shopButton}>
+              <AntDesign name="creditcard" size={20} color="#fff" />
+              <Text style={styles.paymentText}>go to payment</Text>
+            </TouchableOpacity>
+        </View>
       </View>
-      
+     
     </View>
   )
 }
@@ -127,5 +134,24 @@ const styles = StyleSheet.create({
     letterSpacing: -0.41,
     marginLeft: 26,
     marginTop: 2,
+  },
+  paymentText: {
+    letterSpacing: -0.01,
+    marginLeft: 17,
+    fontWeight: '600',
+    fontSize: 15,
+    textTransform: 'uppercase',
+    color: '#FFFFFF'
+  },
+  shopButton: {
+    flexDirection: 'row',
+    marginTop: 10,
+    marginLeft: 21,
+    width: 350,
+    height: 56,
+    borderRadius: 10,
+    alignItems: 'center',
+    backgroundColor: 'rgba(108, 14, 228, 0.7)',
+    justifyContent: 'center',
   },
 })

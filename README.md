@@ -9,6 +9,9 @@ Technologies that I used to develop the first page
 - Expo icons
 - Expo
 
+## 🔖 Layout
+### Layout da aplicação web e mobile disponível no <a href="https://www.figma.com/file/tWrllJunocgWDR6B44p5OM/Delivery-App_UI-Kit?node-id=33%3A444">Figma</a>
+
 ## 💻 Getting Started
 
 **Clone the project and access the folder**
@@ -44,6 +47,7 @@ $ yarn start or expo start
 <h2>Vegetagle Especification and Cart</h2>
   <img src="https://user-images.githubusercontent.com/63013756/87120453-d2554100-c256-11ea-8fd2-2413c39e7822.png" height="800"></img>
   <img src="https://user-images.githubusercontent.com/63013756/87120499-eef17900-c256-11ea-9fce-79931cd46668.png" height="800"></img>
+  <img src="https://user-images.githubusercontent.com/63013756/87206334-dd07e880-c2df-11ea-8a87-a48cd6a3dfaa.png" height="800"></img>
 </div>
 
 ## 🤔 How to contribute

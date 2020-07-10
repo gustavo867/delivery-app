@@ -13,6 +13,7 @@ import Profile from './src/pages/Profile';
 import Cart from './src/pages/Cart';
 import Vegetables from './src/pages/Vegetables';
 import VegetableCart from './src/pages/VegetableCart';
+import Payment from './src/pages/Payment';
 
 const AppStack = createStackNavigator();
 const TabNav = createBottomTabNavigator();
@@ -75,6 +76,7 @@ export default function App() {
         <AppStack.Screen name="App" component={TabNavScreen}/>
         <AppStack.Screen name="Vegetables" component={Vegetables}/>
         <AppStack.Screen name="VegetableCart" component={VegetableCart}/>
+        <AppStack.Screen name="Payment" component={Payment}/>
       </AppStack.Navigator>
     </NavigationContainer>
   );
