@@ -1,6 +1,6 @@
 <div align="center">
-<h1>Delivery App in Progress</h1>
-<img src="https://user-images.githubusercontent.com/63013756/86883536-87a5be80-c0c8-11ea-9eb4-f40fabdb2519.png" height="800"></img>
+<h1>Delivery App </h1>
+<img src="https://user-images.githubusercontent.com/63013756/87349831-59433b80-c52d-11ea-83e6-1e6a943af0ec.png" height="800"></img>
 </div>
 
 ## 🚀 Technologies
@@ -40,7 +40,7 @@ $ yarn start or expo start
 <div align="center">
 <h2>Categories  and Vegetables</h2>
   <img src="https://user-images.githubusercontent.com/63013756/87097933-a0bf8400-c21c-11ea-947e-cdfb8bca5007.png" height="800"></img>
-  <img src="https://user-images.githubusercontent.com/63013756/87096673-b97a6a80-c219-11ea-9458-546e57118ceb.png" height="800"></img>
+  <img src="https://user-images.githubusercontent.com/63013756/87349845-5d6f5900-c52d-11ea-980e-c053b7f951c1.png" height="800"></img>
 </div>
 
 <div align="center">

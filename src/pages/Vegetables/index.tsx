@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons, AntDesign, Feather } from '@expo/vector-icons';
-import { View, Text, Touchable, Image, StyleSheet, TouchableOpacity, TextInput, ScrollView, } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, ScrollView, } from 'react-native';
 
+import vegetable from '../../images/vegetable-background.png';
 
 const Vegetables = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -37,6 +38,7 @@ const Vegetables = () => {
           colors={['rgba(255, 255, 255, 0.1)' , 'rgba(255, 255, 255, 0.4)']}
           style={{ position: 'absolute', height: '100%' , left: 0, right: 0, top: 0,}}
         />
+        <Image style={{ position: 'absolute', zIndex: -1, marginLeft: 220 }} source={vegetable}/>
       <TouchableOpacity onPress={handleNavigateBack} style={{  marginTop: 62, marginLeft: 21, }}>
         <Ionicons name="ios-arrow-back" size={28} color="#2D0C57"/>
       </TouchableOpacity>

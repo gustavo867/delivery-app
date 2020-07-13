@@ -2,8 +2,12 @@ import React from 'react';
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from '@react-navigation/native'
 import { Entypo } from '@expo/vector-icons';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+
+
+import background1 from '../../images/elipse-background-1.png';
+import background2 from '../../images/elipse-background-2.png';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -17,9 +21,11 @@ export default function Home() {
     <View style={styles.container}>
       <StatusBar style="light"/>
       <LinearGradient
-          colors={['rgba(111, 18, 231, 0.4)', 'rgba(111, 18, 231, 0.7);']}
+          colors={['rgba(111, 18, 231, 0.6)', 'rgba(111, 18, 231, 0.7)']}
           style={{ position: 'absolute', height: 450 , left: 0, right: 0, top: 0,}}
         />
+        <Image style={{ position: 'absolute', zIndex: -1,}} source={background1}/>
+        <Image style={{ position: 'absolute', zIndex: -2, marginLeft: 200, }} source={background2}/>
 
     <View style={styles.lowContainer}>
       <View style={{ marginBottom: 20, backgroundColor: 'rgba(255, 255, 255, 0.9)', height: 104, width: 104, borderRadius: 50, justifyContent: 'center', alignItems: 'center'}}>
