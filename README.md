@@ -10,7 +10,7 @@ Technologies that I used to develop the first page
 - Expo
 
 ## 🔖 Layout
-### Layout da aplicação web e mobile disponível no <a href="https://www.figma.com/file/tWrllJunocgWDR6B44p5OM/Delivery-App_UI-Kit?node-id=33%3A444">Figma</a>
+### Apllication layout on  <a href="https://www.figma.com/file/tWrllJunocgWDR6B44p5OM/Delivery-App_UI-Kit?node-id=33%3A444">Figma</a>
 
 ## 💻 Getting Started
 
